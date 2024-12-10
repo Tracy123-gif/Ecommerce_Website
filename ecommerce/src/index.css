@@ -1,0 +1,148 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Jost", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #111111;
+  font-family: "Jost", sans-serif;
+}
+.headerSection{
+  font-family: "Jost", sans-serif;
+  background-color: #F6E6CF;
+  height:560px;
+}
+
+.headerImg{
+  width: 35%;
+  margin-top: 150px;
+}
+.leftNavLinks a{
+  font-size: 17px;
+}
+.title{
+  font-size: 17px;
+}
+.subTitle{
+  font-size: 20px;
+}
+.headerButton{
+  background-color: #111111;
+}
+.secConTxt{
+  background-color: #F6E5CF;
+}
+.explore{
+  display: block;
+  text-align: center;
+  background-color: #111111;
+  color: white;
+  width: 150px;
+  margin: auto;
+  padding: 14px 20px;
+}
+.prices{
+  background-color: #C8815F;
+  text-align: center;
+}
+.iconss{
+  background-color: #C8815F;
+  fill: white;
+}
+.iconss-parent{
+   margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 50%;
+}
+.primary{
+  background-color: #C8815F;
+}
+.primarytxt{
+  color: #C8815F;
+}
+.vh{
+  height: 88vh;
+  width: 100vw;
+}
+.customWidth{
+  max-width: 40ww;
+  min-width: 40vw;
+}
+.shopBtn{
+  background-color: black;
+  transition: all 0.4s;
+  width: 200px;
+
+}
+.shopBtn:hover{
+  background-color: #C8815F;
+}
+
+.background{
+  height: 100vh;
+  z-index: -1;
+
+ 
+}
+/* .formContainer{
+
+} */
+ .image{
+  z-index: 1;
+ }
+ .container{
+  height: 70vh;
+ }
+
+.formContainer > form input{
+  width: 80%;
+  display: block;
+  margin:  10px 0;
+  padding: 10px;
+  border-radius: 10px;
+ }
+ .formContainer > form input:focus{
+  border: 0 0 1px 0;
+  border-color: black;
+ }
+ .formContainer > form  label.checkbox {
+  display: inline;
+  width: 50%;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+
+
+
+ }
+.checkbox{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+
+
+ }
+.margin-bottom{
+  margin-bottom: 400px;
+}
+.margin-bottom-md{
+  margin-bottom: 100px;
+}
+ .leftCheckOut{
+  max-height: 540px;
+ }
