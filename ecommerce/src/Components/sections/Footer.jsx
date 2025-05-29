@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Link, Text, Container, VStack, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Link, Text, Container, VStack, useColorModeValue, Box } from '@chakra-ui/react';
 
 const Footer = () => {
 
@@ -41,8 +41,8 @@ const Footer = () => {
   }
 ];
   return (
-    <div  bg='black'>
-           <Container maxW="9xl" p={{ base: 5, md: 10 }}  bg='black'>
+    <Box className='bg-[#183B4E]'>
+           <Container maxW="9xl" p={{ base: 5, md: 10 }}>
       <VStack spacing={5} alignItems="initial">
         <Flex
           flexWrap="wrap"
@@ -85,7 +85,7 @@ const Footer = () => {
       </VStack>
     </Container>
 
-    </div>
+    </Box>
   )
 }
 

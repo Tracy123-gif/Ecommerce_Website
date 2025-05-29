@@ -39,6 +39,8 @@ const Productdetails = ( { }) => {
               <p className='primarytxt text-3xl'>{title} </p><br /> 
               <p>{description} </p><br />
               <p>${price}</p>
+
+              
               </div>
           </div>
           </div>   

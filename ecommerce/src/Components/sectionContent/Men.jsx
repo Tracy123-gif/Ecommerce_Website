@@ -13,7 +13,7 @@ const Men = () => {
     <div>
        <section className='py-16 flex justify-center'>
       <div className='container '>
-        <div className='grid grid-cols-1 max-w-sm mx-auto md:max-w-none md:mx-0 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-[30px]'>
+        <div className='grid grid-cols-1 max-w-sm mx-auto md:max-w-none md:mx-0 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-[30px]'>
           { filteredMenProducts.map((product) => (
               <Products key={product.id} products={product}/>        
           ))}

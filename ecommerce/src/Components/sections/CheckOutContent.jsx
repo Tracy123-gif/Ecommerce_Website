@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import  {useContext} from 'react';
 import {
     Tabs,
     TabList,
@@ -23,7 +23,7 @@ const CheckOutContent = () => {
     const {checkOut} = useValidate();
     const {cart} = useContext(CartContext);
 
-    const [check, isCheck] = useState()
+    //const [check, isCheck] = useState()
 
     const numOfProducts = cart.length;
     const shippingFee = cart.length * 5;

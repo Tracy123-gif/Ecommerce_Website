@@ -1,4 +1,4 @@
-/* src/index.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
@@ -17,7 +17,7 @@
 }
 .headerSection{
   font-family: "Jost", sans-serif;
-  background-color: #F6E6CF;
+  background-color: #183B4E;
   height:560px;
 }
 
@@ -28,6 +28,9 @@
 .leftNavLinks a{
   font-size: 17px;
 }
+/* .cartIcon{
+  color: red;
+} */
 .title{
   font-size: 17px;
 }
@@ -38,8 +41,10 @@
   background-color: #111111;
 }
 .secConTxt{
-  background-color: #F6E5CF;
+  background-color: #183B4E;
 }
+
+
 .explore{
   display: block;
   text-align: center;
@@ -106,9 +111,9 @@
  }
 
 .formContainer > form input{
-  width: 80%;
+  width: 100%;
   display: block;
-  margin:  10px 0;
+  margin:  20px 0;
   padding: 10px;
   border-radius: 10px;
  }

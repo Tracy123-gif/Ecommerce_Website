@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useContext } from 'react'
 import {Link} from 'react-router-dom'
 import {IoPulse, IoTrashOutline} from 'react-icons/io5'
@@ -26,7 +27,7 @@ const CartItem = ({item}) => {
 
                         <Link
                             className='uppercase text-bold primarytxt text-medium hover:underline max-w-[240px]'
-                            to={`/product/$[id]`}>{title}</Link>
+                            to={`/product/${id}`}>{title}</Link>
                               {/* remove product icon */}
                     <div onClick={()=> removeItemFromCart(id)}>
                         <IoTrashOutline

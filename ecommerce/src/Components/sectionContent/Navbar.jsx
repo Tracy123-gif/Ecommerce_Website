@@ -1,6 +1,8 @@
 import React, {useContext, useEffect} from 'react'
 import logo from '../../assets/image6.svg'
 import {
+    IoBag,
+    IoBagAddSharp,
     IoCart,
     IoCartOutline,
     IoCartSharp,
@@ -29,12 +31,12 @@ const Navbar = () => {
     const userEmail = userRegDetails.email
     const emailFirstLetter = userEmail.slice(0, 1)
     return (
-        <div className='flex justify-between items-center z-10max-sm:py-6 sticky'>
+        <div className='flex justify-between items-center z-10 max-sm:py-6 sticky'>
             <nav className='navLeft flex  gap-10 items-center'>
-                <div className="logo text-black font-bold text-4xl ">
-                    <img src={logo} alt=""/>
+                <div className="logo text-white font-bold text-4xl ">
+                    <p className='text-white'>May</p>
                 </div>
-                <div className='leftNavLinks flex gap-6'>
+                <div className='leftNavLinks flex gap-6 text-white'>
 
                     <Link to={'/'}>Home</Link>
                     <Link to={'/shop'}>Shop</Link>
@@ -51,17 +53,17 @@ const Navbar = () => {
                 {
                     isReg
                         ? <Link
-                                className='border-2 p-1 w-10 flex justify-center items-center h-10 transition-all duration-100 hover:[w-20px h-24] hover:bg-white   rounded-full border-black '
+                                className='border-2 p-1 w-10 flex justify-center items-center h-10 transition-all duration-100 hover:[w-20px h-24] text-white hover:text-black rounded-full border-white bg-[#183B4E] '
                                 to={'/Profile'}>
-                                <div>{emailFirstLetter}</div>
+                                <div className='text-white'>{emailFirstLetter.toUpperCase()}</div>
                             </Link>
-                        : <Link className='border-2 rounded-full border-black ' to={'/Register'}><IoPersonOutline className='p-1' size={25}/></Link>
+                        : <Link className='border-2 rounded-full border-white  bg-white' to={'/Register'}><IoPersonOutline className='p-1 text-white'  color="white" size={25}/></Link>
                 }
 
-                <div className='relative cursor-pointer '>
-                    <IoCartOutline className='' size={27} onClick={() => setIsOpen(true)}/> {console.log(isOpen)}
+                <div className='relative cursor-pointer  '  onClick={() => setIsOpen(true)}>
+                    <IoBagAddSharp className='text-white' style={{color:"white", fill:"white"}} size={30}/> {console.log(isOpen)}
                     <div
-                        className=' border-x-2 border-y-2 border-white absolute -top-4 -left-2 primary z-50 rounded-full p-3 text-white h-5 w-5 flex justify-center items-center'>{cart.length}</div>
+                        className=' border-x-2 border-y-2 border-white absolute -top-4 -left-2  bg-[#316371] z-50 rounded-full p-3 text-white h-5 w-5 flex justify-center items-center'>{cart.length}</div>
                 </div>
 
             </nav>

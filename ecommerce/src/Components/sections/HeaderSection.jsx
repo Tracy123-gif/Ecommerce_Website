@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import React, { useRef, useState } from 'react'
 import Navbar from '../sectionContent/Navbar'
 import HeaderTextContent from '../sectionContent/HeaderTextContent'
-import heroImage from '../../assets/image8.jpg'
+import heroImage from '../../assets/image8.png'
 import heroImage2 from '../../assets/image11.jpg'
 
 const HeaderSection = ({products}) => {
@@ -21,7 +22,7 @@ const HeaderSection = ({products}) => {
     return (
       <div className="headerSection px-20 py-4 overflow-y-hidden">
             <Navbar />
-            <div className='headerContentCon h-5/6 flex align-middle     items-center gap-32 '>
+            <div className='headerContentCon h-5/6 flex align-middle text-white    items-center gap-32 '>
                 <HeaderTextContent/>
                 <div>
                     

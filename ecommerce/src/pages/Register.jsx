@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Components/sectionContent/Navbar';
-import image from '../assets/image7.jpg';
+import image from '../assets/image33.jpg';
 import { useValidate } from '../UseValidate';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { SignupSchema } from '../ValidateSignUp';
@@ -19,6 +19,10 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  const location = useLocation()
+
+
+
   useEffect(() => {
     if (isReg) {
       navigate('/');
@@ -29,18 +33,20 @@ const Register = () => {
 
   return (
     <div>
-      <div className='p-4'>
+      <div className='p-3 bg-[#183B4E]'>
         <Navbar />
       </div>
-      <div className="px-32 py-1 background w-full flex justify-center items-center h-full">
-        <div className="container border-2 border-black rounded-md">
-          <div className="form w-full h-full flex gap-4">
-            <div className="formLeft primary p-8 h-full w-1/2">
+
+
+      <div className=" py-1 max-w-4xl m-auto   flex justify-center items-center">
+        <div className="container ">
+          <div className="form w-full  flex h-[470px] border-black  border-2  rounded-md ">
+            <div className="formLeft bg-[#183B4E] p-8 h-full w-1/2 m-auto">
               {/* header */}
-              <h1 className='text-4xl py-4'>Register</h1>
+              <h1 className='text-4xl text-center py-4 text-white'>Register</h1>
 
               {/* form container */}
-              <div className='formContainer'>
+              <div className='formContainer '>
                 <form onSubmit={handleSubmit(onRegister)}>
 
                   {/* Full Name Field */}
@@ -49,7 +55,7 @@ const Register = () => {
                     type="text" 
                     {...register('name')}  // Register the name input
                   />
-                  {errors.name && <p className='text-red-500 bg-white'>{errors.name.message}</p>} 
+                  {errors.name && <p className='text-red-500 '>{errors.name.message}</p>} 
 
                   {/* Email Field */}
                   <input 
@@ -57,25 +63,21 @@ const Register = () => {
                     type="email" 
                     {...register('email')}
                   />
-                  {errors.email && <p className='text-red-500 bg-white'>{errors.email.message}</p>}
+                  {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
 
                   {/* Password Field */}
                   <input 
+                  
                     placeholder='Password' 
                     type="password" 
                     {...register('password')}
                   />
-                  {errors.password && <p className='text-red-500 bg-white'>{errors.password.message}</p>}
+                  {errors.password && <p className='text-red-500 '>{errors.password.message}</p>}
 
-                  <div className='checkbox'>
-                    <input type="checkbox" name="checkbox" id="checkbox" />
-                    <label htmlFor="checkbox" required>
-                      I agree to the terms of conditions and privacy policy
-                    </label>
-                  </div>
+                
 
                   <button
-                    className='w-4/5 p-3 rounded-md submit border-2 border-black bg-black text-white hover:bg-white block'
+                    className='w-full p-3 rounded-md submit border-2 border-black bg-black text-white hover:bg-[#316371] block'
                     type="submit"
                     value="Submit"
                   >Submit</button>
@@ -83,9 +85,9 @@ const Register = () => {
               </div>
             </div>
 
-            <div className="relative overflow-hidden -z-10 formRight h-full w-1/2 object-cover">
-              <img width={'100%'} height={'inherit'} className='blur-sm' src={image} alt="" />
-            </div>
+          <div className="relative overflow-hidden -z-10 formRight h-full w-1/2">
+            <img className="w-full h-full object-cover" src={image} alt="" />
+          </div>
           </div>
         </div>
       </div>

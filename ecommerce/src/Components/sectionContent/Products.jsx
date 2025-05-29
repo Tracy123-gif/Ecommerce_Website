@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useContext, useState } from 'react'
 import { IoAdd, IoEye, IoSearch, IoArrowBack, IoArrowForward } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
@@ -64,20 +65,20 @@ const Products = ({ allProducts, products }) => {
                     <div className='w-[200px] mx-auto flex justify-center items-center'>
                         <img src={image} alt="" className='max-h-[160px] group-hover:scale-110 transition duration-300' />
                     </div>
-                    <div className='absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2 primary opacity-0 group-hover:opacity-100 transition-all'>
-                        <button onClick={() => openModal(products)} className='w-10 h-10 bg-white rounded-full flex justify-center items-center drop-shadow-2xl'>
-                            <IoEye className='text-2xl text-white' />
+                    <div className='bg-[#183B4E]  absolute top-6 -right-11 group-hover:right-5 p-2 flex flex-col items-center justify-center gap-y-2  opacity-0 group-hover:opacity-100 transition-all rounded-md'>
+                        <button onClick={() => openModal(products)} className='w-10 h-10 bg-white rounded-full flex justify-center items-center drop-shadow-2xl '>
+                            <IoEye className='text-2xl text-white ' />
                         </button>
                     </div>
                     <div>
-                        <div onClick={() => addToCart(id, products)} className="addRemoveCart absolute -bottom-11 group-hover:bottom-0 p-2 flex primary opacity-0 group-hover:opacity-100 transition-all w-full left-0 cursor-pointer text-white">
-                            <p className='text-center flex items-center justify-center'>{addedToCart}</p>
+                        <div onClick={() => addToCart(id, products)} className="addRemoveCart absolute -bottom-11 group-hover:bottom-0 p-2 flex bg-[#183B4E] opacity-0 group-hover:opacity-100 transition-all w-full left-0 cursor-pointer text-white justify-center items-center">
+                            <p className=' text-white'>{addedToCart}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <Link to={`/product/${id}`}>
-                <h2 className='font-semibold mb-1 primarytxt'>{title}</h2>
+                <h2 className='font-semibold mb-1 text-[text-center]'>{title}</h2>
             </Link>
             <p className="text-sm capitalize text-gray500">${price}</p>
 

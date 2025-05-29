@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
 import image1 from '../../assets/image12.jpg'
 import image2 from '../../assets/Group-3628-1-540x840.jpg'
